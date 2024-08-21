@@ -9,9 +9,13 @@ public class FoodChoice
 
     public static void main(String[] args)
     {
-      
+        FoodChoice object = new FoodChoice();
 
+        object.promptEntreeChoice();
+        object.scanEntree();
 
+        object.promptSideChoice();
+        object.scanSide();
     }
 
     public void promptEntreeChoice()

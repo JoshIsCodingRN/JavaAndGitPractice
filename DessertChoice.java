@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DessertChoice
+public class DessertChoice implements ItemInfo
 {
     private Scanner scanner = new Scanner(System.in);
     private int dessert = 0;

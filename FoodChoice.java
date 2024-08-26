@@ -4,7 +4,7 @@ public class FoodChoice
 {
     private Scanner scanner = new Scanner(System.in);
     private int entree = 0;
-    private int side;
+    private int side = 0;
 
 
     public static void main(String[] args)

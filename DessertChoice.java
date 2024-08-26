@@ -11,8 +11,7 @@ public class DessertChoice implements ItemInfo
     //fields
     private Scanner scanner = new Scanner(System.in);
     private int dessert = 0;
-    private int utensil = 0;
-    private int utinsil;
+    private int utinsil = 0;
 
 
     /**
@@ -38,7 +37,7 @@ public class DessertChoice implements ItemInfo
     public void promptDessertChoice()
     {
         System.out.println("What dessert would you like?");
-        System.out.println("1. cake\n2. ice cream\n3.brownie");
+        System.out.println("1. cake\n2. ice cream\n3. brownie");
     }
 
     /**
@@ -56,7 +55,10 @@ public class DessertChoice implements ItemInfo
      */
     public int scanDessert()
     {
-        while (dessert < 3 || dessert > 3)
+        while (this.dessert == 0 
+        && this.dessert != 1
+        && this.dessert != 2
+        && this.dessert != 3)
         {
             dessert = scanner.nextInt();
         }
@@ -70,12 +72,15 @@ public class DessertChoice implements ItemInfo
      */
     public int scanUtinsil()
     {
-        while (utensil < 3 || utensil > 3)
+        while (this.utinsil == 0 
+                && this.utinsil != 1
+                && this.utinsil != 2
+                && this.utinsil != 3)
         {
-            utensil  = scanner.nextInt();
+            utinsil  = scanner.nextInt();
         }
 
-        return utensil;
+        return utinsil;
     }
 
     /**
@@ -104,15 +109,15 @@ public class DessertChoice implements ItemInfo
     public void calories() {
         switch (dessert) {
             case 1:
-                System.out.println("15"); 
+                System.out.println("15 cals"); 
                 break;
         
             case 2:
-                System.out.println("20");
+                System.out.println("20 cals");
                 break;
                         
             case 3:
-                System.out.println("25");
+                System.out.println("25 cals");
                 break;
                     
             default:
